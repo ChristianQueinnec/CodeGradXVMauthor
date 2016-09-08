@@ -39,7 +39,7 @@ install : CodeGradXvmauthor.tgz
 
 # Caution: npm takes the whole directory that is . and not the sole
 # content of CodeGradXvmauthor.tgz 
-publish : clean README.pdf
+publish : clean 
 	git status .
 	-git commit -m "NPM publication `date`" .
 	git push
