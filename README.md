@@ -22,6 +22,8 @@ The new `codegradxvmauthor` Node module reconfigures `codegradxlib` to
 use this virtual machine.
 
 To sum up: this module is the configuration of CodeGradXagent for VMauthor.
+See also a more detailed [documentation of codegradxagent
+](https://www.npmjs.com/package/codegradxagent) Node module.
 
 ## Installation
 
