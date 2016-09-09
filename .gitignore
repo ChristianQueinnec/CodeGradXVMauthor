@@ -1,7 +1,8 @@
 *~
 node_modules/
 .fw4ex.json
+CodeGradXvmauthor/
 CodeGradXvmauthor.tgz
 ./[0-9]*ml
 spec/vmauth-data.json
-
+tmp/

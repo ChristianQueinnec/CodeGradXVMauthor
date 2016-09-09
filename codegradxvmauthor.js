@@ -58,8 +58,11 @@ CodeGradX.VMauthorAgent.vmhostname = 'vmauthor.codegradx.org';
 
 CodeGradX.VMauthorAgent.prototype.adaptToVMauthor = function () {
     var agent = this;
-    var vmhostname = agent.commands.options.ip || 
-                     CodeGradX.VMauthorAgent.vmhostname;
+    var vmhostname = CodeGradX.VMauthorAgent.vmhostname;
+    if ( agent.commands && 
+         agent.commands.options.ip ) {
+        vmhostname = agent.commands.options.ip;
+    }
     agent.state.servers = {
         names: ['a', 'e', 'x', 's'],
         domain: vmhostname,
@@ -111,10 +114,16 @@ CodeGradX.VMauthorAgent.prototype.process = function (strings) {
 if ( _.endsWith(process.argv[1], 'codegradxvmauthor.js') ) {
     // We are running that script:
     var agent = new CodeGradX.VMauthorAgent();
-    try {
-        return agent.process(process.argv.slice(2));
-    } catch (exc) {
+    function failure (exc) {
         console.log('Failure: ' + exc);
+        process.exit(1);
+    }
+    try {
+        return agent.process(process.argv.slice(2))
+            .then(function () { process.exit(0) })
+            .catch(failure);
+    } catch (exc) {
+        failure(exc);
     };
 }
 
