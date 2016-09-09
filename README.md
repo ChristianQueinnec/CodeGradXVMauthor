@@ -38,6 +38,10 @@ enrich your `/etc/hosts` file and add a line defining
 192.168.133.201  vmauthor vmauthor.codegradx.org
 ```
 
+If this hostname is not defined, you should use the
+`--ip=192.168.133.201` option in your invocations of the
+`codegradxvmauthor` script.
+
 ## Use
 
 You may access the VMauthor virtual machine when browsing
@@ -45,7 +49,7 @@ You may access the VMauthor virtual machine when browsing
 as a student. However you may also prefer to script these interactions
 in which case, your script requires some credentials to access VMauthor.
 
-### Getting credentials
+### Credentials
 
 Credentials are JSON files that may be fetched from VMauthor. These
 files define a user name and a cookie (valid a few hours):
@@ -55,7 +59,19 @@ wget -O fw4ex-author.json   http://vmauthor/fw4exjson/0
 wget -O fw4ex-student1.json http://vmauthor/fw4exjson/1
 ```
 
-### 
+After getting these credentials you may use them with the
+`--credentials=fw4ex-author.json` or
+`--credentials=fw4ex-student1.json` option. Credentials are limited in
+time so you may additionally specify `--update-credentials` to refresh
+your credentials.
+
+### Actions
+
+Students may submit answers to exercises. Only authors may create new
+exercises and mark batches of students' answers. See directory
+`shtests/` for examples of use.
+
+
 
 
 

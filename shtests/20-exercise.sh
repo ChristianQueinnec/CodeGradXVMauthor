@@ -8,7 +8,7 @@ HOSTIP=192.168.122.205
 [ -d tmp ] && rm -rf tmp
 mkdir -p tmp
 
-# Get credentials for student
+# Get credentials for author
 CREDENTIALS=tmp/fw4ex-author0.json
 wget -O $CREDENTIALS http://$HOSTIP/fw4exjson/0
 
