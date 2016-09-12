@@ -39,7 +39,7 @@ describe("CodeGradXagent process Job", function () {
             "--stuff",    exerciseTGZFile1,
             "--counter",  350,
             "--timeout",  3,
-            "--retry",     2
+            "--retry",    2
         ]).then(function (exercise) {
             expect(exercise).toBeDefined();
             agent.process([

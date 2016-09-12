@@ -116,6 +116,7 @@ if ( _.endsWith(process.argv[1], 'codegradxvmauthor.js') ) {
     var agent = new CodeGradX.VMauthorAgent();
     function failure (exc) {
         console.log('Failure: ' + exc);
+        CodeGradX.getCurrentState().log.show();
         process.exit(1);
     }
     try {

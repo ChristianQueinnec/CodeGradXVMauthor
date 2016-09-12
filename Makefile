@@ -17,6 +17,12 @@ tests : clean import
 	bash -x shtests/20-exercise.sh
 	bash -x shtests/30-batch.sh
 
+reset :
+	npm install -g codegradxlib
+	npm link codegradxlib
+	npm install -g codegradxagent
+	npm link codegradxagent
+
 refresh :
 	cp -p ../CodeGradXlib/codegradxlib.js \
 	   node_modules/codegradxagent/node_modules/codegradxlib/
