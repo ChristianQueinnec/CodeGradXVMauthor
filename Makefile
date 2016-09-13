@@ -47,6 +47,8 @@ import :
 # content of CodeGradXvmauthor.tgz 
 
 publish : clean 
+	-rm -rf node_modules/codegradx*
+	npm install codegradxagent
 	git status .
 	-git commit -m "NPM publication `date`" .
 	git push

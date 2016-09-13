@@ -1,6 +1,6 @@
 {
   "name": "codegradxvmauthor",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Configuration of CodeGradXagent for VMauthor.",
   "keywords": [
     "CodeGradX",
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/paracamplus/CodeGradXvmauthor.git"
+    "url": "https://github.com/ChristianQueinnec/CodeGradXvmauthor.git"
   },
   "dependencies": {
-    "codegradxagent": "^1.0"
+    "codegradxagent": "^1.0.9"
   },
   "devDependencies": {
     "jasmine": "^2.3.2"
@@ -34,7 +34,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/paracamplus/CodeGradXvmauthor/issues"
+    "url": "https://github.com/ChristianQueinnec/CodeGradXvmauthor/issues"
   },
-  "homepage": "https://github.com/paracamplus/CodeGradXvmauthor#readme"
+  "homepage": "https://github.com/ChristianQueinnec/CodeGradXvmauthor#readme"
 }
