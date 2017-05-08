@@ -48,7 +48,7 @@ import :
 
 publish : clean 
 	-rm -rf node_modules/codegradx*
-	npm install codegradxagent
+	npm install -S codegradxagent
 	git status .
 	-git commit -m "NPM publication `date`" .
 	git push
@@ -57,6 +57,7 @@ publish : clean
 	cd tmp/CodeGradXvmauthor/ && npm version patch && npm publish
 	cp -pf tmp/CodeGradXvmauthor/package.json .
 	rm -rf tmp
+	npm install -g codegradxvmauthor
 
 CodeGradXvmauthor.tgz : clean
 	-rm -rf tmp

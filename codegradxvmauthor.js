@@ -86,6 +86,7 @@ CodeGradX.VMauthorAgent.prototype.adaptToVMauthor = function () {
         },
         s: {
             suffix: '/index.html',
+            protocol: 'http',
             0: {
                 host: vmhostname + '/s',
             }
