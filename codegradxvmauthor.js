@@ -92,6 +92,16 @@ CodeGradX.VMauthorAgent.prototype.adaptToVMauthor = function () {
             }
         }
     };
+    if ( CodeGradX.checkIfHTTPS() ) {
+        var protocol = 'https';
+        var ss = agent.state.servers;
+        ss.protocol = protocol;
+        ss.a.protocol = ss.a.protocol || protocol;
+        ss.e.protocol = ss.e.protocol || protocol;
+        ss.s.protocol = ss.s.protocol || protocol;
+        ss.x.protocol = ss.x.protocol || protocol;
+        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+    }
     return agent;
 };
 
