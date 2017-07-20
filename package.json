@@ -1,6 +1,6 @@
 {
   "name": "codegradxvmauthor",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Configuration of CodeGradXagent for VMauthor.",
   "keywords": [
     "CodeGradX",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "codegradxagent": "^1.0.17",
-    "codegradxlib": "^1.0.56"
+    "codegradxlib": "^1.0.59"
   },
   "devDependencies": {
     "jasmine": "^2.3.2"
