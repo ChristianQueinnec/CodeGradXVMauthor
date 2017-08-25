@@ -1,6 +1,6 @@
 {
   "name": "codegradxvmauthor",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Configuration of CodeGradXagent for VMauthor.",
   "keywords": [
     "CodeGradX",
@@ -17,11 +17,11 @@
     "url": "https://github.com/ChristianQueinnec/CodeGradXvmauthor.git"
   },
   "dependencies": {
-    "codegradxagent": "^1.0.18",
-    "codegradxlib": "^1.0.59"
+    "codegradxagent": "^1.0.19",
+    "codegradxlib": "^1.0.62"
   },
   "devDependencies": {
-    "jasmine": "^2.3.2"
+    "jasmine": "^2.7.0"
   },
   "author": {
     "name": "Christian Queinnec",

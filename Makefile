@@ -12,10 +12,10 @@ lint :
 
 tests : clean import
 	-rm .fw4ex.json [0-9]*ml
-	jasmine
-	bash -x shtests/10-job.sh
-	bash -x shtests/20-exercise.sh
-	bash -x shtests/30-batch.sh
+	export NODE_TLS_REJECT_UNAUTHORIZED=0 ; jasmine
+	export NODE_TLS_REJECT_UNAUTHORIZED=0 ; bash -x shtests/10-job.sh
+	export NODE_TLS_REJECT_UNAUTHORIZED=0 ; bash -x shtests/20-exercise.sh
+	export NODE_TLS_REJECT_UNAUTHORIZED=0 ; bash -x shtests/30-batch.sh
 
 reset :
 	npm install -g codegradxlib

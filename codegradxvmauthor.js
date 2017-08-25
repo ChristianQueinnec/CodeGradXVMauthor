@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Time-stamp: "2017-07-22 09:41:04 queinnec"
+
 /**
 
  Configure codegradxagent to use VMauthor

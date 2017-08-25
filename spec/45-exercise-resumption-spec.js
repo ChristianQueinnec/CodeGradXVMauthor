@@ -25,6 +25,7 @@ describe("CodeGradXagent process Job", function () {
     }
 
     var exerciseTGZFile1 = "spec/org.example.fw4ex.grading.check.tgz";
+    var markFactor = 100;
 
     it("should submit another exercise and resume it", function (done) {
         var agent = CodeGradX.getCurrentAgent();
@@ -41,7 +42,7 @@ describe("CodeGradXagent process Job", function () {
             ]).then(function (exercise2) {
                 expect(exercise2.pseudojobs).toBeDefined();
                 expect(exercise2.pseudojobs.perfect).toBeDefined();
-                expect(exercise2.pseudojobs.perfect.mark).toBe(100);
+                expect(exercise2.pseudojobs.perfect.mark).toBe(100*markFactor);
                 // Normally 35[23]-exerciseAuthorReport.xml are equal
                 done();
             })

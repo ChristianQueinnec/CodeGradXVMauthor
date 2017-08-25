@@ -26,6 +26,7 @@ describe("CodeGradXVMauthorAgent process Job", function () {
 
     var exerciseTGZFile1 = "spec/org.example.fw4ex.grading.check.tgz";
     var exercise1;
+    var markFactor = 100;
 
     it("should submit an exercise", function (done) {
         var agent = CodeGradX.getCurrentAgent();
@@ -43,7 +44,7 @@ describe("CodeGradXVMauthorAgent process Job", function () {
             expect(exercise).toBeDefined();
             expect(exercise.pseudojobs).toBeDefined();
             expect(exercise.pseudojobs.perfect).toBeDefined();
-            expect(exercise.pseudojobs.perfect.mark).toBe(100);
+            expect(exercise.pseudojobs.perfect.mark).toBe(100*markFactor);
             exercise1 = exercise;
             done();
         }, faildone);
@@ -64,7 +65,7 @@ describe("CodeGradXVMauthorAgent process Job", function () {
             "--stuff",    'spec/oefgc/1.tgz'
         ]).then(function (job) {
             expect(job).toBeDefined();
-            expect(job.mark).toBe(10);
+            expect(job.mark).toBe(10*markFactor);
             done();
         }, faildone);
     }, 100*1000); // 100 seconds
@@ -85,7 +86,7 @@ describe("CodeGradXVMauthorAgent process Job", function () {
             "--stuff",    'spec/oefgc/1.tgz'
         ]).then(function (job) {
             expect(job).toBeDefined();
-            expect(job.mark).toBe(10);
+            expect(job.mark).toBe(10*markFactor);
             done();
         }, faildone);
     }, 100*1000); // 100 seconds
