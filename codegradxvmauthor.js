@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Time-stamp: "2017-07-22 09:41:04 queinnec"
+// Time-stamp: "2017-10-09 19:37:02 queinnec"
 
 /**
 
@@ -68,20 +68,24 @@ CodeGradX.VMauthorAgent.prototype.adaptToVMauthor = function () {
     agent.state.servers = {
         names: ['a', 'e', 'x', 's'],
         domain: vmhostname,
+        protocol: 'http',
         a: {
             suffix: '/alive',
+            protocol: 'http',
             0: {
                 host: vmhostname + '/a'
             }
         },
         e: {
             suffix: '/alive',
+            protocol: 'http',
             0: {
                 host: vmhostname + '/e',
             }
         },
         x: {
             suffix: '/dbalive',
+            protocol: 'http',
             0: {
                 host: vmhostname + '/x',
             }
@@ -95,7 +99,7 @@ CodeGradX.VMauthorAgent.prototype.adaptToVMauthor = function () {
         }
     };
     if ( CodeGradX.checkIfHTTPS() ) {
-        var protocol = 'https';
+        var protocol = 'http';
         var ss = agent.state.servers;
         ss.protocol = protocol;
         ss.a.protocol = ss.a.protocol || protocol;
