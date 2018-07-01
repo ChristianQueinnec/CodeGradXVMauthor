@@ -8,7 +8,7 @@ clean :
 # ############## Working rules:
 
 lint :
-	jshint codegradxvmauthor.js spec/*.js
+	eslint codegradxvmauthor.js
 
 tests : clean import
 	-rm .fw4ex.json [0-9]*ml
@@ -17,11 +17,11 @@ tests : clean import
 	export NODE_TLS_REJECT_UNAUTHORIZED=0 ; bash -x shtests/20-exercise.sh
 	export NODE_TLS_REJECT_UNAUTHORIZED=0 ; bash -x shtests/30-batch.sh
 
-reset :
-	npm install -g codegradxlib
-	npm link codegradxlib
-	npm install -g codegradxagent
-	npm link codegradxagent
+update :
+	-rm -rf node_modules
+	npm install codegradxlib@`jq -r .version < ../CodeGradXlib/package.json`
+	npm install codegradxagent@`jq -r .version < ../CodeGradXagent/package.json`
+	npm install
 
 refresh :
 	cp -p ../CodeGradXlib/codegradxlib.js \
@@ -46,9 +46,10 @@ import :
 # Caution: npm takes the whole directory that is . and not the sole
 # content of CodeGradXvmauthor.tgz 
 
-publish : clean 
+publish : lint clean 
 	-rm -rf node_modules/codegradx*
-	npm install -S codegradxagent
+	npm install -S codegradxagent@`jq -r .version < ../CodeGradXagent/package.json`
+	npm install -S codegradxlib@`jq -r .version < ../CodeGradXlib/package.json`
 	git status .
 	-git commit -m "NPM publication `date`" .
 	git push

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Time-stamp: "2017-10-09 19:37:02 queinnec"
+// Time-stamp: "2018-07-01 15:44:15 queinnec"
 
 /**
 
@@ -31,7 +31,7 @@ machine.
  */
 
 var CodeGradX = require('codegradxagent');
-var _ = require('lodash');
+var _endsWith = require('lodash/endsWith');
 
 // Exports what CodeGradX exports:
 module.exports = CodeGradX;
@@ -128,7 +128,7 @@ CodeGradX.VMauthorAgent.prototype.process = function (strings) {
    If used as a script then process the arguments otherwise do nothing.
 */
 
-if ( _.endsWith(process.argv[1], 'codegradxvmauthor.js') ) {
+if ( _endsWith(process.argv[1], 'codegradxvmauthor.js') ) {
     // We are running that script:
     var agent = new CodeGradX.VMauthorAgent();
     function failure (exc) {
@@ -137,7 +137,7 @@ if ( _.endsWith(process.argv[1], 'codegradxvmauthor.js') ) {
         process.exit(1);
     }
     try {
-        return agent.process(process.argv.slice(2))
+        agent.process(process.argv.slice(2))
             .then(function () { process.exit(0) })
             .catch(failure);
     } catch (exc) {

@@ -6,7 +6,7 @@ CodeGradX is a grading infrastructure
 - where authors deploy exercises and propose them to students,
 - where teachers may follow the progress of a cohort of students.
 
-The [CodeGradX](http://paracamplus.com/spip/spip.php?rubrique2)
+The [CodeGradX](https://codegradx.org/)
 infrastructure is operated via REST protocols. To ease its use,
 CodeGradXlib is a Javascript Library that provides a programmatic API
 to operate the CodeGradX infrastructure. This library is contained in
@@ -16,7 +16,7 @@ CodeGradX may also be operated from command line using the
 `codegradxagent` Node module. By default, `codegradxlib` is configured
 to use the real constellation of CodeGradX servers howwver authors may
 use a virtual machine, named [VMauthor
-](http://paracamplus.com/CodeGradX/VM/CodeGradX-VMauthor-latest.img.bz2),
+](https://codegradx.org/CodeGradX/VM/CodeGradX-VMauthor-latest.img.bz2),
 to write and check their exercises with their own computing resources.
 The new `codegradxvmauthor` Node module reconfigures `codegradxlib` to
 use this virtual machine.
