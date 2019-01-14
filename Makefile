@@ -58,7 +58,7 @@ publish : lint clean
 	cd tmp/CodeGradXvmauthor/ && npm version patch && npm publish
 	cp -pf tmp/CodeGradXvmauthor/package.json .
 	rm -rf tmp
-	npm install -g codegradxvmauthor
+	npm install -g codegradxvmauthor@`jq -r .version < package.json`
 
 CodeGradXvmauthor.tgz : clean
 	-rm -rf tmp
