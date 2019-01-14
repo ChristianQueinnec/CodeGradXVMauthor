@@ -46,7 +46,8 @@ import :
 # Caution: npm takes the whole directory that is . and not the sole
 # content of CodeGradXvmauthor.tgz 
 
-publish : lint clean 
+publish : lint clean
+t:
 	-rm -rf node_modules/codegradx*
 	npm install -S codegradxagent@`jq -r .version < ../CodeGradXagent/package.json`
 	npm install -S codegradxlib@`jq -r .version < ../CodeGradXlib/package.json`

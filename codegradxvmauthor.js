@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Time-stamp: "2018-07-01 15:44:15 queinnec"
+// Time-stamp: "2019-01-14 18:08:20 queinnec"
 
 /**
 
@@ -80,21 +80,21 @@ CodeGradX.VMauthorAgent.prototype.adaptToVMauthor = function () {
             suffix: '/alive',
             protocol: 'http',
             0: {
-                host: vmhostname + '/e',
+                host: vmhostname + '/e'
             }
         },
         x: {
             suffix: '/dbalive',
             protocol: 'http',
             0: {
-                host: vmhostname + '/x',
+                host: vmhostname + '/x'
             }
         },
         s: {
             suffix: '/index.html',
             protocol: 'http',
             0: {
-                host: vmhostname + '/s',
+                host: vmhostname + '/s'
             }
         }
     };
@@ -138,11 +138,11 @@ if ( _endsWith(process.argv[1], 'codegradxvmauthor.js') ) {
     }
     try {
         agent.process(process.argv.slice(2))
-            .then(function () { process.exit(0) })
+            .then(function () { process.exit(0); })
             .catch(failure);
     } catch (exc) {
         failure(exc);
-    };
+    }
 }
 
 // end of codegradxvmauthor.js

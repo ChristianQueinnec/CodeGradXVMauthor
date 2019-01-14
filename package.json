@@ -17,7 +17,7 @@
     "url": "https://github.com/ChristianQueinnec/CodeGradXvmauthor.git"
   },
   "dependencies": {
-    "codegradxagent": "^1.0.27",
+    "codegradxagent": "^1.0.28",
     "codegradxlib": "^2.0.22",
     "codegradxlib4node": "^2.0.20"
   },
