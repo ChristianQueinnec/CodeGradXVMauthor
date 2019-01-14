@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "codegradxagent": "^1.0.27",
-    "codegradxlib": "^2.0.22"
+    "codegradxlib": "^2.0.22",
     "codegradxlib4node": "^2.0.20"
   },
   "devDependencies": {
